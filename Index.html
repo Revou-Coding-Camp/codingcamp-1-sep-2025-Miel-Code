@@ -11,31 +11,29 @@
     <!-- Primary Content Start -->
     <section class="primaryContent">
         <h2>Dolito</h2>
-        <div class="taskInput">
-            <input type="text" placeholder="Add your new Task">
-            <button>Add</button>
+        <div class="input">
+            <input class="input-field" type="text" placeholder="Add your new Task" id="taskInput">
+            <input class="dateInput-field" type="date" id="dateInput">
+            <button class="btn" id="btn-addTask">Add</button>
         </div>
-        <div class="dateInput">
-            <input type="date">
-            <button>Set Date</button>
-        </div>
-        <div>
-            <ul>
-                <li></li>
+            <ul class="scroll">
+                <li id="taskList"></li>
             </ul>
-        </div>
         <div>
             <hr>
-            <p><span>0</span> Total Tasks</p>
-            <button>Filter</button>
-            <button>Clear All</button>
+            <div>
+                <p><span>0</span> Total Tasks</p>
+                <button type="button" class="btn" id="btn-filter">Filter</button>
+                <button type="button" class="btn" id="btn-clearAll">Clear All</button>
+            </div>
         </div>
     </section>
     <!-- Primary Content End -->
 
     <!-- Footer Start -->
     <footer>
-
+        <p class="createdBy">Created by</p>
+        <p class="creatorName">Jilan</p>
     </footer>
     <!-- Footer End -->
 </body>

@@ -1,0 +1,67 @@
+:root{
+    --BGui: linear-gradient(
+        180deg,
+        rgba(55, 53, 62, 0.6) 2%,
+        #715A5A 100%
+        );
+        --dark: #37353e;
+        --grey: #44444E;
+        --mocca: #715A5A;
+        --light-white: #D3DAD9;
+}
+
+/* UI Style */
+body{
+    background: var(--BGui);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+/* Primary Content */
+
+h2{
+    margin: 0;
+}
+
+.primaryContent{
+    background-color: var(--mocca);
+    padding: 6rem 5rem;
+    justify-content: space-around;
+    height: 50%;
+    width: 60%;
+    max-width: 30rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem 1rem rgba(55, 53, 62, 0.2);
+}
+
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    height: 3rem;
+    color: var(--light-white);
+}
+
+.input{
+    display: flex;
+    position: relative;
+
+}
+
+.input-field{
+    width: 100%;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+    border: 0.06px solid var(--grey)
+}
+
+.dateInput-field{
+    text-align: center;
+    width: 50%;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+    border: 0.06px solid var(--grey)
+}
