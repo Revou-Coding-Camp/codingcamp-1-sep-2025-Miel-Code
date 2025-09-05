@@ -25,9 +25,10 @@ body{
 
 h2{
     margin: 0;
+    padding-bottom: 1rem
 }
 
-.primaryContent{
+.todo{
     background-color: var(--light-white);
     padding: 4rem 5rem;
     display: flex;
@@ -73,7 +74,7 @@ h2{
     border: 0.06px solid var(--grey-border)
 }
 
-#btn-addTask, #btn-filter, #btn-clearAll{
+#addButton, #btn-filter, #btn-clearAll{
     background-color: var(--dark);
     color: var(--light-white);
     border: none;
@@ -82,7 +83,7 @@ h2{
     margin-left: 1rem;
 }
 
-#btn-addTask:hover, #btn-filter:hover, #btn-clearAll:hover{
+#addButton:hover, #btn-filter:hover, #btn-clearAll:hover{
     background-color: var(--grey);
     cursor: pointer;
 }

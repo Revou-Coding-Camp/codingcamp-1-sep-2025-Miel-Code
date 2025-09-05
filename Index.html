@@ -12,24 +12,22 @@
 </head>
 <body>
     <!-- Primary Content Start -->
-    <section class="primaryContent">
+    <section class="todo">
         <h2>Dolito</h2>
-        <form>
             <div class="input">
                 <input class="input-field" type="text" placeholder="Add your new task" id="taskInput">
                 <input class="dateInput-field" type="date" id="dateInput">
-                <button class="btn" id="btn-addTask" onclick="validateInput();">Add</button>
+                <button class="btn" id="addButton">Add</button>
             </div>
-        </form>
             <ul class="scroll">
                 <li id="taskList"></li>
             </ul>
         <div>
             <hr class="counter">
             <div class="counter-container">
-                <button type="button" class="btn" id="btn-filter">Filter</button>
+                <button type="button" id="btn-filter">Filter</button>
                 <p><span>0</span> Total Tasks</p>
-                <button type="button" class="btn" id="btn-clearAll">Clear All</button>
+                <button type="button" id="btn-clearAll">Clear All</button>
             </div>
         </div>
     </section>
