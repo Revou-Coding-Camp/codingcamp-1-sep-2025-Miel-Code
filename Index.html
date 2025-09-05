@@ -4,26 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dolito: To Do List</title>
+    <!-- CSS Link -->
     <link rel="stylesheet" href="/CSS/style.css">
+
+    <!-- Javascript Link -->
     <script src="/JS/script.js"></script>
 </head>
 <body>
     <!-- Primary Content Start -->
     <section class="primaryContent">
         <h2>Dolito</h2>
-        <div class="input">
-            <input class="input-field" type="text" placeholder="Add your new Task" id="taskInput">
-            <input class="dateInput-field" type="date" id="dateInput">
-            <button class="btn" id="btn-addTask">Add</button>
-        </div>
+        <form>
+            <div class="input">
+                <input class="input-field" type="text" placeholder="Add your new task" id="taskInput">
+                <input class="dateInput-field" type="date" id="dateInput">
+                <button class="btn" id="btn-addTask" onclick="validateInput();">Add</button>
+            </div>
+        </form>
             <ul class="scroll">
                 <li id="taskList"></li>
             </ul>
         <div>
-            <hr>
-            <div>
-                <p><span>0</span> Total Tasks</p>
+            <hr class="counter">
+            <div class="counter-container">
                 <button type="button" class="btn" id="btn-filter">Filter</button>
+                <p><span>0</span> Total Tasks</p>
                 <button type="button" class="btn" id="btn-clearAll">Clear All</button>
             </div>
         </div>
@@ -32,8 +37,10 @@
 
     <!-- Footer Start -->
     <footer>
-        <p class="createdBy">Created by</p>
-        <p class="creatorName">Jilan</p>
+        <div class="footer">
+           <p class="createdBy">Created by</p>
+            <p class="creatorName">Jilan Rokan ❤️</p>
+        </div>
     </footer>
     <!-- Footer End -->
 </body>

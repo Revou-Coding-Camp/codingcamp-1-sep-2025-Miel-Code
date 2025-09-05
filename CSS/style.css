@@ -1,12 +1,14 @@
 :root{
     --BGui: linear-gradient(
         180deg,
-        rgba(55, 53, 62, 0.6) 2%,
+        rgba(56, 52, 52, 0.9) 0%,
         #715A5A 100%
         );
         --dark: #37353e;
         --grey: #44444E;
-        --mocca: #715A5A;
+        --grey-border: #a7a5a5;
+        --mocca: #9f8888;
+        --green: #037242;
         --light-white: #D3DAD9;
 }
 
@@ -21,15 +23,15 @@ body{
     height: 100vh;
 }
 
-/* Primary Content */
-
 h2{
     margin: 0;
 }
 
 .primaryContent{
-    background-color: var(--mocca);
-    padding: 6rem 5rem;
+    background-color: var(--light-white);
+    padding: 4rem 5rem;
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
     height: 50%;
     width: 60%;
@@ -41,10 +43,11 @@ h2{
 h2{
     text-align: center;
     text-transform: uppercase;
-    height: 3rem;
-    color: var(--light-white);
+    color: var(--dark);
 }
 
+
+/* Form Style */
 .input{
     display: flex;
     position: relative;
@@ -53,9 +56,13 @@ h2{
 
 .input-field{
     width: 100%;
-    padding: 0.4rem;
+    padding: 0.6rem;
     border-radius: 0.3rem;
-    border: 0.06px solid var(--grey)
+    border: 0.06px solid var(--grey-border);
+}
+
+#taskInput {
+    margin-right: 0.2rem;
 }
 
 .dateInput-field{
@@ -63,5 +70,121 @@ h2{
     width: 50%;
     padding: 0.4rem;
     border-radius: 0.3rem;
-    border: 0.06px solid var(--grey)
+    border: 0.06px solid var(--grey-border)
+}
+
+#btn-addTask, #btn-filter, #btn-clearAll{
+    background-color: var(--dark);
+    color: var(--light-white);
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.4rem 1rem;
+    margin-left: 1rem;
+}
+
+#btn-addTask:hover, #btn-filter:hover, #btn-clearAll:hover{
+    background-color: var(--grey);
+    cursor: pointer;
+}
+
+.todo-container{
+    display: flex;
+    gap: 1rem;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem;
+    overflow-y: scroll;
+}
+
+li{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.3rem;
+}
+
+.scroll{
+    height: 15rem;
+    scrollbar-width: thin;
+}
+
+.scroll::-webkit-scrollbar{
+    width: 0.5rem;
+}
+
+.scroll::-webkit-scrollbar-thumb{
+    background-color: var(--dark);
+    border-radius: 0.3rem;
+}
+
+.scroll::-webkit-scrollbar-track{
+    display: none;
+}
+
+#taskList p{
+    color: var(--light-white)
+}
+
+.disabled{
+    display: flex;
+    text-decoration: line-through;
+}
+
+input[type="checkbox"]::before {
+    content: "\2713";
+    display: inline-block;
+    font-size: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+    border: 0.1rem solid var(--grey-border);
+    border-radius: 0.3rem;
+    color: transparent
+}
+
+input[type="checkbox"]::before::after {
+    color: var(--light-white);
+    background-color: var(--green);
+    border: 0.06rem solid var(--green);
+    border-radius: 50%;
+}
+
+
+/* Bottom Section */
+.counter{
+    border: 0.06rem solid var(--grey-border);
+    border-radius: 0.3rem;
+}
+
+.counter-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--grey-border)
+}
+
+
+/* Footer */
+
+.footer{
+    display: flex;
+    gap: 1.8rem;
+    background-color: var(--light-white);
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 2rem;
+    padding: 0.3rem 1rem;
+    border-radius: 0.3rem;
+}
+
+.createdBy{
+    color: var(--grey-border);
+}
+
+.creatorName{
+    color: var(--dark);
+    font-weight: bold;
 }
