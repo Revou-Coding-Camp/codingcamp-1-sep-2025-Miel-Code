@@ -2,24 +2,11 @@ let todo = JSON.parse(localStorage.getItem("todo")) || [];
 
 const taskInput = document.getElementById("taskInput");
 const dateInput = document.getElementById("dateInput");
-const addButton = document.querySelector(".btn");
+const addButton = document.querySelector(".addButton"); // Make sure your HTML has an element with class="addButton"
 const taskList = document.getElementById("taskList");
 const btnFilter = document.getElementById("btn-filter");
-const clearAll = document.getElementById("btn-clearAll");
+const btnClear = document.getElementById("btn-clearAll");
 
-// Initialize the display
-document.addEventListener("DOMContentLoaded", function() {
-    addButton.addEventListener("click", addTask);
-    taskInput.addEventListener('keydown', function(event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            addTask();
-        }
-    });
-    btnFilter.addEventListener("click", filterTask);
-    clearAll.addEventListener("click", clearAllTasks);
-    displayTasks();
-});
 
 function addTask() {
     const newTask = taskInput.value.trim();
@@ -28,18 +15,31 @@ function addTask() {
             text: newTask,
             disabled: false,
         });
-        displayTasks();
     }
+        displayTasks();
 }
 
-function displayTasks() {
-
-}
-
-function filterTask() {
-
-}
-
-function clearAllTasks() {
-
-}
+document.addEventListener("DOMContentLoaded", function() {
+    if (addButton) {
+        addButton.addEventListener("click", addTask);
+    }
+    if (taskInput) {
+        taskInput.addEventListener('keydown', function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                addTask();
+            }
+        });
+    }
+    if (btnFilter) {
+        btnFilter.addEventListener("click", filterTask);
+    }
+    if (clearAll) {
+        clearAll.addEventListener("click", clearAllTasks);
+    }
+    displayTasks();
+});
+    btnFilter.addEventListener("click", filterTask);
+    btnClear.addEventListener("click", clearAllTasks);
+    displayTasks();
+    
